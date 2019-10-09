@@ -21,7 +21,7 @@ def home(request):
 
     # Creating http response
     response = HttpResponse(content_type='application/pdf;')
-    response['Content-Disposition'] = 'inline; filename=list_people.pdf'
+    response['Content-Disposition'] = 'inline; filename=untitle.pdf'
     response['Content-Transfer-Encoding'] = 'binary'
     with tempfile.NamedTemporaryFile(delete=True) as output:
         output.write(result)
